@@ -1,0 +1,254 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="ITSUP2018.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="Image/favicon.ico" type="image/x-icon" />
+    <!--link rel="icon" href="Image/favicon.ico" /-->
+    <title>IT SUPPORT v0.0.1 </title>
+
+
+    <link href="jQueryCalendarThai/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <link href="jQueryCalendarThai/SpecialDateSheet.css" rel="stylesheet" />
+
+    <script src="Script/JSFunction.js"></script>
+    <script src="jQueryCalendarThai/jquery-1.9.0.min.js"></script>
+    <script src="jQueryCalendarThai/jquery-ui-1.10.3.custom.js"></script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+
+    <script src="jquery.mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link href="jquery.mCustomScrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!-- -->
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css" />
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="plugins/iCheck/all.css" />
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css" />
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css" />
+
+
+    <link rel="stylesheet" href="CSS/Master.css" />
+    <script src="js/MyScript.js"></script>
+
+    <script>
+        $.datepicker.regional['th'] = {
+            changeMonth: true,
+            changeYear: true,
+            //defaultDate: GetFxupdateDate(FxRateDateAndUpdate.d[0].Day),
+            yearOffSet: 543,
+            //showOn: "button",
+            //buttonImage: 'jQueryCalendarThai/images/calendar.gif',
+            //buttonImageOnly: true,
+            dateFormat: 'dd M yy',
+            dayNames: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
+            dayNamesMin: ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'],
+            monthNames: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'],
+            monthNamesShort: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'],
+            constrainInput: true,
+
+            prevText: 'ก่อนหน้า',
+            nextText: 'ถัดไป',
+            yearRange: '-100:+100',
+            buttonText: 'เลือก',
+            beforeShow: function () {
+                if ($(this).val() != "") {
+                    var arrayDate = $(this).val().split(" ");
+                    if (arrayDate.length == 4) {
+                        arrayDate[2] = arrayDate[3];
+                    }
+                    $(this).val(arrayDate[0] + " " + arrayDate[1] + " " + arrayDate[2]);
+                } else {
+                    $(this).datepicker("setDate", new Date()); //Set ค่าวันปัจจุบัน
+                }
+            },
+            onClose: function (dateText, inst) {
+                $(this).datepicker('option', 'dateFormat', 'dd M yy');
+            }
+        };
+        $.datepicker.setDefaults($.datepicker.regional['th']);
+    </script>
+
+    <script>
+        function startTime() {
+            var today = new Date();
+            var d = today.getDate();
+            var M = (today.getMonth() + 1);
+            var y = (today.getFullYear() + 543);
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            d = checkTime(d);
+            M = checkTime(M);
+            m = checkTime(m);
+            s = checkTime(s);
+
+            var days = ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'];
+            var months = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+
+            var day = days[today.getDay()];
+            var month = months[today.getMonth()];
+
+            document.getElementById('txt_date').innerHTML = "วัน" + day + "ที่ " + d + " " + month + " พ.ศ. " + y + " เวลา " + h + ":" + m + ":" + s + "น.";
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+        $(document).ready(function () {
+            //startTime();
+            $('#menu1').click(function () {
+                $('#menu1-ct').slideToggle(500);
+                $('#menu2-ct').slideUp(500);
+            });
+            /*$('#menu2').click(function () {
+                $('#menu2-ct').slideToggle(500);
+                $('#menu1-ct').slideUp(500);
+            });*/
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31
+              && (charCode < 48 || charCode > 57)) {
+                $("#errmsg").html("Digits Only").show().fadeOut("slow");
+                return false;
+            }
+            return true;
+        }
+        function isLettersOnly(evt) {
+            evt = (evt) ? evt : event;
+            var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
+                ((evt.which) ? evt.which : 0));
+            if (charCode > 31 && (charCode < 65 || charCode > 90) &&
+                (charCode < 97 || charCode > 122)) {
+                $("#errmsg").html("Letter Only").show().fadeOut("slow");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+
+
+    <script>
+
+        function fa1(v) {
+            $(".ps-ms-left-ext").css("display", "block");
+            $("#hvr1").css("display", "none");
+            $("#hvr2").css("display", "none");
+            $("#hvr3").css("display", "none");
+            $("#hvr4").css("display", "none");
+            $("#hvr5").css("display", "none");
+            $("#hvr6").css("display", "none");
+            $("#hvr7").css("display", "none");
+            $("#hv1").attr("class", "ps-ms-left-link-group-rr");
+            $("#hv2").attr("class", "ps-ms-left-link-group-rr");
+            $("#hv3").attr("class", "ps-ms-left-link-group-rr");
+            $("#hv4").attr("class", "ps-ms-left-link-group-rr");
+            $("#hv5").attr("class", "ps-ms-left-link-group-rr");
+            $("#hv6").attr("class", "ps-ms-left-link-group-rr");
+            $("#hv7").attr("class", "ps-ms-left-link-group-rr");
+            $("#hvr" + v).css("display", "block");
+            $("#hv" + v).attr("class", "ps-ms-left-link-group-rr ps-ms-left-link-group-rr-selected");
+        }
+
+        $(document).ready(function () {
+            $("#hv1").click(function () {
+                fa1(1);
+            });
+            $("#hv2").click(function () {
+                fa1(2);
+            });
+            $("#hv3").click(function () {
+                fa1(3);
+            });
+            $("#hv4").click(function () {
+                fa1(4);
+            });
+            $("#hv5").click(function () {
+                fa1(5);
+            });
+            $("#hv6").click(function () {
+                fa1(6);
+            });
+            $("#hv7").click(function () {
+                fa1(7);
+            });
+            $(".ps-ms-left-ext-close").click(function () {
+                $(".ps-ms-left-ext").css("display", "none");
+                $("#hvr1").css("display", "none");
+                $("#hvr2").css("display", "none");
+                $("#hvr3").css("display", "none");
+                $("#hvr4").css("display", "none");
+                $("#hvr5").css("display", "none");
+                $("#hvr6").css("display", "none");
+                $("#hv1").attr("class", "ps-ms-left-link-group-rr");
+                $("#hv2").attr("class", "ps-ms-left-link-group-rr");
+                $("#hv3").attr("class", "ps-ms-left-link-group-rr");
+                $("#hv4").attr("class", "ps-ms-left-link-group-rr");
+                $("#hv5").attr("class", "ps-ms-left-link-group-rr");
+                $("#hv6").attr("class", "ps-ms-left-link-group-rr");
+                $("#hv7").attr("class", "ps-ms-left-link-group-rr");
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            /*$(".ps-ms-left").click(function () {
+				$(".ps-ms-left-ext").toggle(0);
+			});
+			$(".ps-ms-left-ext-close").click(function () {
+				$(".ps-ms-left-ext").toggle(0);
+			});*/
+            $("#hdt").click(function () {
+                $(".ps-ms-center-header-ext").fadeToggle(250);
+                $(".ps-ms-center-header-notification").fadeOut(100);
+            });
+            $("#menu2").click(function () {
+                $(".ps-ms-center-header-ext").fadeOut(100);
+                $(".ps-ms-center-header-notification").fadeToggle(250);
+            });
+        });
+    </script>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <div class="ps-ms-center-content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">s
+
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="ps-ms-center-footer">
+        Copyright © 2018 Kerry Express
+    </div>
+
+
+</body>
+</html>
