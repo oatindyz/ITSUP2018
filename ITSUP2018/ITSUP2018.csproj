@@ -139,6 +139,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1027,7 +1028,6 @@
     <Content Include="css\bootstrap.min.css.map" />
     <Content Include="css\Master.css" />
     <Content Include="css\Print.css" />
-    <Content Include="DefaultPage.aspx" />
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="bin\ITSUP2018.dll.config" />
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
@@ -2757,6 +2757,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2768,13 +2775,6 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DefaultPage.aspx.cs">
-      <DependentUpon>DefaultPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DefaultPage.aspx.designer.cs">
-      <DependentUpon>DefaultPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StockSelect.aspx.cs">
       <DependentUpon>StockSelect.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

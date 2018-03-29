@@ -11,7 +11,7 @@ namespace ITSUP2018
 {
 
 
-    public partial class WebForm1
+    public partial class Default
     {
     }
 }
