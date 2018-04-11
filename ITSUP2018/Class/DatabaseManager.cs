@@ -12,7 +12,8 @@ namespace ITSUP2018.Class
     public class DatabaseManager
     {
 
-        public static readonly string CONNECTION_STRING = @"Data Source=DESKTOP-N63BGQF\SQLEXPRESS;Initial Catalog=KEIT-supoat;Integrated Security=True;User ID=Usertest1;Password=Usertest1"+ "providerName="+"System.Data.SqlClient"+";";
+        //public static readonly string CONNECTION_STRING = @"Data Source=DESKTOP-N63BGQF\SQLEXPRESS;Initial Catalog=KEIT-supoat;Integrated Security=True;User ID=Usertest1;Password=Usertest1" + "providerName=" + "System.Data.SqlClient" + ";";
+        public static readonly string CONNECTION_STRING = @"Data Source=THSAM05ITSN1013\SQLEXPRESS;Initial Catalog=KEIT-supoat;Integrated Security=True;User ID=Usertest1;Password=Usertest1" + "providerName=" + "System.Data.SqlClient" + ";";
 
         public static void ExecuteNonQuery(string sql)
         {

@@ -154,7 +154,6 @@
   <ItemGroup>
     <Content Include="bin\ExcelDataReader.dll" />
     <Content Include="bin\ExcelDataReader.xml" />
-    <Content Include="bin\JQueryDataTables.dll" />
     <Content Include="bin\Microsoft.Owin.dll" />
     <Content Include="bin\Microsoft.Owin.xml" />
     <Content Include="bin\Owin.dll" />
@@ -180,6 +179,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="obj\Debug\ITSUP2018.csprojResolveAssemblyReference.cache" />
     <Content Include="mail\contact_me.php" />
+    <None Include="Properties\PublishProfiles\Claim.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <None Include="scripts\_references.js" />
     <Content Include="scripts\index.js" />

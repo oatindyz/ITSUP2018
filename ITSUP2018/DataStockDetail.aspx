@@ -94,27 +94,18 @@
             <tr id="trEquip_Status" runat="server">
                 <td class="col1">Equip_Status</td>
                 <td class="col2">
-                    <asp:TextBox ID="tbEquip_Status" runat="server" CssClass="ps-textbox" placeHolder="Equip_Status"></asp:TextBox>
+                    <asp:HiddenField ID="HFvalueCheck" runat="server" />
+                    <asp:RadioButton ID="cbtbEquip_StatusY" runat="server" CssClass="radio_button radio_button_default" GroupName="ordained" Text="Complete" />
+                    <asp:RadioButton ID="cbtbEquip_StatusN" runat="server" CssClass="radio_button radio_button_default" GroupName="ordained" Text="Not Complete" />
                 </td>
             </tr>
 
-            <tr id="trEquip_File" runat="server">
-                <td class="col1">Equip_File</td>
-                <td class="col2">
-                    <asp:TextBox ID="tbEquip_File" runat="server" CssClass="ps-textbox" placeHolder="Equip_File"></asp:TextBox>
-                </td>
-            </tr>
-
-            <tr id="trEquip_PC" runat="server">
-                <td class="col1">Equip_PC</td>
-                <td class="col2">
-                    <asp:TextBox ID="tbEquip_PC" runat="server" CssClass="ps-textbox" placeHolder="Equip_PC"></asp:TextBox>
-                </td>
-            </tr>
+          
 
         </table>
         <div style="text-align: center; margin-top: 10px;">
-            <asp:LinkButton ID="lbuS1Back" runat="server" CssClass="ps-button" OnClick="lbuS1Back_Click">Back</asp:LinkButton>
+            <asp:LinkButton ID="lbuBack" runat="server" CssClass="ps-button" OnClick="lbuBack_Click">Back</asp:LinkButton>
+            <asp:LinkButton ID="lbuSave" runat="server" CssClass="ps-button" OnClick="lbuSave_Click">Save</asp:LinkButton>
         </div>
 
     </div>

@@ -58,7 +58,7 @@ namespace ITSUP2018
                         {
                             if (i > 0)
                             {
-                                using (SqlCommand com = new SqlCommand("INSERT INTO Equip_Main (Equip_Date ,Equip_Name ,ID_Equip_Type ,Equip_Serial ,Equip_Asset ,Equip_Remark ,Date_Start_Claim ,Equip_Case_Claim ,Equip_Case_Brand ,Equip_Status ,Equip_File ,Equip_PC) VALUES (@Equip_Date ,@Equip_Name ,@ID_Equip_Type ,@Equip_Serial ,@Equip_Asset ,@Equip_Remark ,@Date_Start_Claim ,@Equip_Case_Claim ,@Equip_Case_Brand ,@Equip_Status ,@Equip_File ,@Equip_PC)", con))
+                                using (SqlCommand com = new SqlCommand("INSERT INTO Equip_Main (Equip_Date ,Equip_Name ,ID_Equip_Type ,Equip_Serial ,Equip_Asset ,Equip_Remark ,Date_Start_Claim ,Equip_Case_Claim ,Equip_Case_Brand ,Equip_Status ,Equip_File ,Equip_PC, Created_Date) VALUES (@Equip_Date ,@Equip_Name ,@ID_Equip_Type ,@Equip_Serial ,@Equip_Asset ,@Equip_Remark ,@Date_Start_Claim ,@Equip_Case_Claim ,@Equip_Case_Brand ,@Equip_Status ,@Equip_File ,@Equip_PC ,@Created_Date)", con))
                                 {
                                     com.Parameters.Add(new SqlParameter("Equip_Date", excelReader.GetDateTime(0).AddYears(-543).ToString("MM/dd/yyyy")));
                                     com.Parameters.Add(new SqlParameter("Equip_Name", excelReader.GetString(1)));
@@ -72,6 +72,7 @@ namespace ITSUP2018
                                     com.Parameters.Add(new SqlParameter("Equip_Status", "N"));
                                     com.Parameters.Add(new SqlParameter("Equip_File", fi.FullName));
                                     com.Parameters.Add(new SqlParameter("Equip_PC", HttpContext.Current.Server.MachineName));
+                                    com.Parameters.Add(new SqlParameter("Created_Date", DateTime.Today.AddYears(-543).ToString("MM/dd/yyyy hh:mm:ss")));
                                     com.ExecuteNonQuery();
                                 }
                             }

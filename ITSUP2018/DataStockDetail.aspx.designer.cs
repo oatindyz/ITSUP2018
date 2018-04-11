@@ -202,57 +202,48 @@ namespace ITSUP2018 {
         protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_Status;
         
         /// <summary>
-        /// tbEquip_Status control.
+        /// HFvalueCheck control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEquip_Status;
+        protected global::System.Web.UI.WebControls.HiddenField HFvalueCheck;
         
         /// <summary>
-        /// trEquip_File control.
+        /// cbtbEquip_StatusY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_File;
+        protected global::System.Web.UI.WebControls.RadioButton cbtbEquip_StatusY;
         
         /// <summary>
-        /// tbEquip_File control.
+        /// cbtbEquip_StatusN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEquip_File;
+        protected global::System.Web.UI.WebControls.RadioButton cbtbEquip_StatusN;
         
         /// <summary>
-        /// trEquip_PC control.
+        /// lbuBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_PC;
+        protected global::System.Web.UI.WebControls.LinkButton lbuBack;
         
         /// <summary>
-        /// tbEquip_PC control.
+        /// lbuSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEquip_PC;
-        
-        /// <summary>
-        /// lbuS1Back control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbuS1Back;
+        protected global::System.Web.UI.WebControls.LinkButton lbuSave;
     }
 }
