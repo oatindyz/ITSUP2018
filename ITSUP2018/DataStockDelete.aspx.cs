@@ -18,7 +18,7 @@ namespace ITSUP2018
             }
             if (!IsPostBack)
             {
-                DatabaseManager.ExecuteNonQuery("DELETE Equip_Main WHERE ID_Equip = '" + Request.QueryString["id"].ToString() + "'");
+                DatabaseManager.ExecuteNonQuery("DELETE tb_equip WHERE Equip_ID = '" + Request.QueryString["id"].ToString() + "'");
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Data have Deleted!')", true);
                 Response.Redirect("DataStock.aspx");
             }

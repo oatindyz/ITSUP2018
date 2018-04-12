@@ -27,7 +27,7 @@ namespace ITSUP2018
 
             SqlConnection con = new SqlConnection(DatabaseManager.CONNECTION_STRING);
             con.Open();
-            SqlCommand com = new SqlCommand("SELECT ID_Equip, Convert(varchar, Equip_Date, 101) Equip_Date, ID_Equip_Type + ' : ' + Equip_Name as Equip_Name, Equip_Serial, Equip_Asset, Equip_Remark, Equip_Case_Claim + ' : ' + Equip_Case_Brand Equip_Case_Claim FROM Equip_Main ORDER BY ID_Equip ASC", con);
+            SqlCommand com = new SqlCommand("SELECT Equip_ID, Equip_Rep, Equip_Name, Equip_location, Equip_Asset, Equip_Remark, Cast(Case_Claim as nvarchar(255)) + ' : ' + Case_Brand Equip_Case_Claim FROM tb_equip ORDER BY Equip_Rep ASC", con);
             SqlDataReader reader = com.ExecuteReader();
             String UnreadText = "";
             Int32 i = 0;
@@ -35,9 +35,9 @@ namespace ITSUP2018
             {
 
                 UnreadText += "<tr>";
-                UnreadText += "			<td class=\"center\">" + reader["Equip_Date"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + reader["Equip_Rep"] + "</td>";
                 UnreadText += "			<td class=\"center\">" + reader["Equip_Name"] + "</td>";
-                UnreadText += "			<td class=\"center\">" + reader["Equip_Serial"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + reader["Equip_location"] + "</td>";
                 UnreadText += "			<td class=\"center\">" + reader["Equip_Asset"] + "</td>";
                 UnreadText += "			<td class=\"center\">" + reader["Equip_Remark"] + "</td>";
                 UnreadText += "			<td class=\"center\">" + reader["Equip_Case_Claim"] + "</td>";

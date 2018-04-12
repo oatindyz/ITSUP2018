@@ -13,6 +13,24 @@ namespace ITSUP2018 {
     public partial class DataStockDetail {
         
         /// <summary>
+        /// trEquip_Rep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_Rep;
+        
+        /// <summary>
+        /// tbEquip_Rep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbEquip_Rep;
+        
+        /// <summary>
         /// trEquip_Date control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace ITSUP2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbEquip_Date;
+        
+        /// <summary>
+        /// trEquip_location control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_location;
+        
+        /// <summary>
+        /// tbEquip_location control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbEquip_location;
         
         /// <summary>
         /// trEquip_Name control.
@@ -121,76 +157,112 @@ namespace ITSUP2018 {
         protected global::System.Web.UI.WebControls.TextBox tbEquip_Remark;
         
         /// <summary>
-        /// trDate_Start_Claim control.
+        /// trDate_Call_Claim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDate_Start_Claim;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDate_Call_Claim;
         
         /// <summary>
-        /// tbDate_Start_Claim control.
+        /// tbDate_Call_Claim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDate_Start_Claim;
+        protected global::System.Web.UI.WebControls.TextBox tbDate_Call_Claim;
         
         /// <summary>
-        /// trDate_End_Claim control.
+        /// trCase_Claim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDate_End_Claim;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCase_Claim;
         
         /// <summary>
-        /// tbDate_End_Claim control.
+        /// tbCase_Claim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDate_End_Claim;
+        protected global::System.Web.UI.WebControls.TextBox tbCase_Claim;
         
         /// <summary>
-        /// trEquip_Case_Claim control.
+        /// trCase_Brand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_Case_Claim;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCase_Brand;
         
         /// <summary>
-        /// tbEquip_Case_Claim control.
+        /// tbCase_Brand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEquip_Case_Claim;
+        protected global::System.Web.UI.WebControls.TextBox tbCase_Brand;
         
         /// <summary>
-        /// trEquip_Case_Brand control.
+        /// trDate_Claim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_Case_Brand;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDate_Claim;
         
         /// <summary>
-        /// tbEquip_Case_Brand control.
+        /// tbDate_Claim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEquip_Case_Brand;
+        protected global::System.Web.UI.WebControls.TextBox tbDate_Claim;
+        
+        /// <summary>
+        /// trCase_Remark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCase_Remark;
+        
+        /// <summary>
+        /// tbCase_Remark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCase_Remark;
+        
+        /// <summary>
+        /// trDate_Sent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDate_Sent;
+        
+        /// <summary>
+        /// tbDate_Sent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbDate_Sent;
         
         /// <summary>
         /// trEquip_Status control.

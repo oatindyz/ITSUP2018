@@ -30,33 +30,40 @@ namespace ITSUP2018
             using (SqlConnection con = new SqlConnection(DatabaseManager.CONNECTION_STRING))
             {
                 con.Open();
-                using (SqlCommand com = new SqlCommand("SELECT Convert(varchar, Equip_Date, 101), Equip_Name, ID_Equip_Type, Equip_Serial, Equip_Asset, Equip_Remark, Convert(varchar, Date_Start_Claim, 101), Convert(varchar, Date_End_Claim, 101), Equip_Case_Claim, Equip_Case_Brand, Equip_Status FROM Equip_Main WHERE ID_Equip = '" + Request.QueryString["id"].ToString() + "'", con))
+                using (SqlCommand com = new SqlCommand("select Equip_Rep, Convert(varchar, Equip_Date, 103) as Equip_Date, Equip_location, Equip_Name, ID_Equip_Type, Equip_Serial, Equip_Asset, Equip_Remark, Convert(varchar, Date_Call_Claim, 103) as Date_Call_Claim, Case_Claim, Case_Brand, Convert(varchar, Date_Claim, 103) as Date_Claim, Case_Remark, Convert(varchar, Date_Sent, 103) as Date_Sent, Equip_Status, Equip_ID from tb_Equip WHERE Equip_ID = '" + Request.QueryString["id"].ToString() + "'", con))
                 {
                     using (SqlDataReader reader = com.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             int i = 0;
+
+                            tbEquip_Rep.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
                             tbEquip_Date.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
+                            tbEquip_location.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
                             tbEquip_Name.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
                             tbID_Equip_Type.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
                             tbEquip_Serial.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
                             tbEquip_Asset.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
                             tbEquip_Remark.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
-                            tbDate_Start_Claim.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
-                            tbDate_End_Claim.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
-                            tbEquip_Case_Claim.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
-                            tbEquip_Case_Brand.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
+                            tbDate_Call_Claim.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
+                            tbCase_Claim.Text = reader.IsDBNull(i) ? "" : reader.GetInt64(i).ToString(); ++i;
+                            tbCase_Brand.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
+                            tbDate_Claim.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
+                            tbCase_Remark.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
+                            tbDate_Sent.Text = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
                             HFvalueCheck.Value = reader.IsDBNull(i) ? "" : reader.GetString(i).ToString(); ++i;
-                            if (HFvalueCheck.Value == "N") {
+
+                            if (HFvalueCheck.Value == "N")
+                            {
                                 cbtbEquip_StatusY.Checked = false;
                                 cbtbEquip_StatusN.Checked = true;
-                            } else if (HFvalueCheck.Value == "Y")
+                            }
+                            else if (HFvalueCheck.Value == "Y")
                             {
                                 cbtbEquip_StatusY.Checked = true;
                                 cbtbEquip_StatusN.Checked = false;
                             }
-                              
 
                         }
                     }
@@ -78,6 +85,7 @@ namespace ITSUP2018
                 con.Open();
                 using (SqlCommand com = new SqlCommand("UPDATE Equip_Main SET Equip_Date=@Equip_Date, Equip_Name=@Equip_Name, ID_Equip_Type=@ID_Equip_Type, Equip_Serial=@Equip_Serial, Equip_Asset=@Equip_Asset, Equip_Remark=@Equip_Remark, Date_Start_Claim=@Date_Start_Claim, Date_End_Claim=@Date_End_Claim, Equip_Case_Claim=@Equip_Case_Claim, Equip_Case_Brand=@Equip_Case_Brand, Equip_Status=@Equip_Status WHERE ID_Equip = '" + Request.QueryString["id"].ToString() + "'", con))
                 {
+                    /*
                     com.Parameters.Add(new SqlParameter("Equip_Date", tbEquip_Date.Text));
                     com.Parameters.Add(new SqlParameter("Equip_Name", tbEquip_Name.Text));
                     com.Parameters.Add(new SqlParameter("ID_Equip_Type", tbID_Equip_Type.Text));
@@ -110,7 +118,7 @@ namespace ITSUP2018
                     
                     id = com.ExecuteNonQuery();
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Data Save!')", true);
-
+                    */
                 }
             }
         }
