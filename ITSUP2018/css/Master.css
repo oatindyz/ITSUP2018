@@ -442,7 +442,7 @@ input[type=radio] + label {
     padding: 2px;
     /*border-radius: 4px;*/
     transition: color ease 0.25s, background-color ease 0.25s, border-color ease 0.25s;
-
+    width:inherit;
     color: #000000;
     background-color: #ffffff;
     border: 1px solid #c0c0c0;
@@ -1200,7 +1200,7 @@ input[type=radio] + label {
     font-size: 16px;
     font-weight: bold;
     color: rgb(206,91,91);
-    margin-bottom: 10px;
+    margin-bottom:10px;
 }
 .ps-div-title-red-left {
     text-align: left;

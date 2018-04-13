@@ -160,16 +160,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Claim.aspx" />
+    <Content Include="ClaimDelete.aspx" />
+    <Content Include="ClaimDetail.aspx" />
+    <Content Include="ClaimImport.aspx" />
     <Content Include="css\cssGridview\bootstrap-theme.css" />
     <Content Include="css\cssGridview\bootstrap.min.css" />
     <Content Include="css\cssGridview\dataTables.jqueryui.css" />
     <Content Include="css\cssGridview\jquery-1.11.1.min.js" />
     <Content Include="css\cssGridview\jquery.dataTables.min.js" />
-    <Content Include="DataStock.aspx" />
-    <Content Include="DataStockDelete.aspx" />
-    <Content Include="DataStockDetail.aspx" />
     <Content Include="Image\Icon\manage.png" />
-    <Content Include="ImportExcel.aspx" />
+    <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -180,7 +181,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="mail\contact_me.php" />
+    <Content Include="Upload\ImportFormatColumn.xlsx" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -203,18 +204,6 @@
     <Content Include="scripts\index.js" />
     <Content Include="scripts\jquery-1.4.4.min.js" />
     <Content Include="scripts\jquery.dataTables.min.js" />
-    <Content Include="scss\agency.scss" />
-    <Content Include="scss\_contact.scss" />
-    <Content Include="scss\_footer.scss" />
-    <Content Include="scss\_global.scss" />
-    <Content Include="scss\_masthead.scss" />
-    <Content Include="scss\_mixins.scss" />
-    <Content Include="scss\_navbar.scss" />
-    <Content Include="scss\_portfolio.scss" />
-    <Content Include="scss\_services.scss" />
-    <Content Include="scss\_team.scss" />
-    <Content Include="scss\_timeline.scss" />
-    <Content Include="scss\_variables.scss" />
     <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js.map" />
@@ -1040,95 +1029,6 @@
     <Content Include="css\bootstrap.min.css.map" />
     <Content Include="css\Master.css" />
     <Content Include="css\Print.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Font\Roboto\Roboto-Black.ttf" />
-    <Content Include="Font\Roboto\Roboto-BlackItalic.ttf" />
-    <Content Include="Font\Roboto\Roboto-Bold.ttf" />
-    <Content Include="Font\Roboto\Roboto-BoldItalic.ttf" />
-    <Content Include="Font\Roboto\Roboto-Italic.ttf" />
-    <Content Include="Font\Roboto\Roboto-Light.ttf" />
-    <Content Include="Font\Roboto\Roboto-LightItalic.ttf" />
-    <Content Include="Font\Roboto\Roboto-Medium.ttf" />
-    <Content Include="Font\Roboto\Roboto-MediumItalic.ttf" />
-    <Content Include="Font\Roboto\Roboto-Regular.ttf" />
-    <Content Include="Font\Roboto\Roboto-Thin.ttf" />
-    <Content Include="Font\Roboto\Roboto-ThinItalic.ttf" />
-    <Content Include="Font\TH Sarabun PSK\THSarabun Bold.ttf" />
-    <Content Include="Font\TH Sarabun PSK\THSarabun BoldItalic.ttf" />
-    <Content Include="Font\TH Sarabun PSK\THSarabun Italic.ttf" />
-    <Content Include="Font\TH Sarabun PSK\THSarabun.ttf" />
-    <Content Include="jquery.mCustomScrollbar\jquery.mCustomScrollbar.concat.min.js" />
-    <Content Include="jquery.mCustomScrollbar\jquery.mCustomScrollbar.css" />
-    <Content Include="jQueryCalendarThai\images\add.gif" />
-    <Content Include="jQueryCalendarThai\images\ajax-loader.gif" />
-    <Content Include="jQueryCalendarThai\images\ajax-loader_blue.gif" />
-    <Content Include="jQueryCalendarThai\images\animated-overlay.gif" />
-    <Content Include="jQueryCalendarThai\images\arrow-left.png" />
-    <Content Include="jQueryCalendarThai\images\arrows-ffffff.png" />
-    <Content Include="jQueryCalendarThai\images\asc.gif" />
-    <Content Include="jQueryCalendarThai\images\bg.gif" />
-    <Content Include="jQueryCalendarThai\images\calendar.gif" />
-    <Content Include="jQueryCalendarThai\images\calendar.png" />
-    <Content Include="jQueryCalendarThai\images\Contact\blog-21x17-left-BW.gif" />
-    <Content Include="jQueryCalendarThai\images\Contact\Facebook-21x17-left-BW.gif" />
-    <Content Include="jQueryCalendarThai\images\Contact\foursquare-21x17-left-BW.gif" />
-    <Content Include="jQueryCalendarThai\images\Contact\JavaScriptThaiLogo.png" />
-    <Content Include="jQueryCalendarThai\images\Contact\LinkedIn-21x17-left-BW %281%29.gif" />
-    <Content Include="jQueryCalendarThai\images\Contact\LinkedIn-21x17-left-BW.gif" />
-    <Content Include="jQueryCalendarThai\images\Contact\Logo_JavaScriptThai3.png" />
-    <Content Include="jQueryCalendarThai\images\Contact\Pinterest-21x17-left-BW.gif" />
-    <Content Include="jQueryCalendarThai\images\Contact\Twitter-21x17-left-BW.gif" />
-    <Content Include="jQueryCalendarThai\images\Contact\VitalDesign-logo-148x26.gif" />
-    <Content Include="jQueryCalendarThai\images\del.png" />
-    <Content Include="jQueryCalendarThai\images\delete.png" />
-    <Content Include="jQueryCalendarThai\images\desc.gif" />
-    <Content Include="jQueryCalendarThai\images\down.gif" />
-    <Content Include="jQueryCalendarThai\images\empty.gif" />
-    <Content Include="jQueryCalendarThai\images\error.png" />
-    <Content Include="jQueryCalendarThai\images\fill.gif" />
-    <Content Include="jQueryCalendarThai\images\hd-bg.png" />
-    <Content Include="jQueryCalendarThai\images\icon_close.png" />
-    <Content Include="jQueryCalendarThai\images\info.png" />
-    <Content Include="jQueryCalendarThai\images\loadingAnimation.gif" />
-    <Content Include="jQueryCalendarThai\images\Logo.gif" />
-    <Content Include="jQueryCalendarThai\images\Logo.jpg" />
-    <Content Include="jQueryCalendarThai\images\logo.png" />
-    <Content Include="jQueryCalendarThai\images\Logo_JavaScriptThai3.png" />
-    <Content Include="jQueryCalendarThai\images\minus %281%29.gif" />
-    <Content Include="jQueryCalendarThai\images\minus.gif" />
-    <Content Include="jQueryCalendarThai\images\personal-information.png" />
-    <Content Include="jQueryCalendarThai\images\set.gif" />
-    <Content Include="jQueryCalendarThai\images\sort_asc.png" />
-    <Content Include="jQueryCalendarThai\images\sort_both.png" />
-    <Content Include="jQueryCalendarThai\images\sort_desc.png" />
-    <Content Include="jQueryCalendarThai\images\success.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_flat_10_000000_40x100.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_glass_100_f6f6f6_1x400.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_glass_100_fdf5ce_1x400.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-    <Content Include="jQueryCalendarThai\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-    <Content Include="jQueryCalendarThai\images\ui-icons_222222_256x240.png" />
-    <Content Include="jQueryCalendarThai\images\ui-icons_228ef1_256x240.png" />
-    <Content Include="jQueryCalendarThai\images\ui-icons_888888_256x240.png" />
-    <Content Include="jQueryCalendarThai\images\ui-icons_ef8c08_256x240.png" />
-    <Content Include="jQueryCalendarThai\images\ui-icons_ffd27a_256x240.png" />
-    <Content Include="jQueryCalendarThai\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="jQueryCalendarThai\images\up.gif" />
-    <Content Include="jQueryCalendarThai\images\validation.png" />
-    <Content Include="jQueryCalendarThai\images\warning.png" />
-    <Content Include="jQueryCalendarThai\images\webbg.gif" />
-    <Content Include="jQueryCalendarThai\jquery-1.9.0.min.js" />
-    <Content Include="jQueryCalendarThai\jquery-ui-1.10.3.custom.css" />
-    <Content Include="jQueryCalendarThai\jquery-ui-1.10.3.custom.js" />
-    <Content Include="jQueryCalendarThai\SpecialDateSheet.css" />
     <Content Include="js\agency.js" />
     <Content Include="js\agency.min.js" />
     <Content Include="js\bootstrap.bundle.js" />
@@ -2726,35 +2626,42 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Claim.aspx.cs">
+      <DependentUpon>Claim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claim.aspx.designer.cs">
+      <DependentUpon>Claim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimDelete.aspx.cs">
+      <DependentUpon>ClaimDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimDelete.aspx.designer.cs">
+      <DependentUpon>ClaimDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimDetail.aspx.cs">
+      <DependentUpon>ClaimDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimDetail.aspx.designer.cs">
+      <DependentUpon>ClaimDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimImport.aspx.cs">
+      <DependentUpon>ClaimImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimImport.aspx.designer.cs">
+      <DependentUpon>ClaimImport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Class\ConnectionDB.cs" />
     <Compile Include="Class\DatabaseManager.cs" />
-    <Compile Include="DataStock.aspx.cs">
-      <DependentUpon>DataStock.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DataStock.aspx.designer.cs">
-      <DependentUpon>DataStock.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataStockDelete.aspx.cs">
-      <DependentUpon>DataStockDelete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DataStockDelete.aspx.designer.cs">
-      <DependentUpon>DataStockDelete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataStockDetail.aspx.cs">
-      <DependentUpon>DataStockDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DataStockDetail.aspx.designer.cs">
-      <DependentUpon>DataStockDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ImportExcel.aspx.cs">
-      <DependentUpon>ImportExcel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ImportExcel.aspx.designer.cs">
-      <DependentUpon>ImportExcel.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

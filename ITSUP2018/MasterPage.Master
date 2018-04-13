@@ -12,7 +12,7 @@
     <title>IT SUPPORT v0.0.1 </title>
 
 
-     <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
     <link href="Content/themes/base/jquery.ui.datepicker.css" rel="stylesheet" />
     <link href="Content/themes/base/jquery.ui.theme.css" rel="stylesheet" />
@@ -20,6 +20,26 @@
     <script src="Script/jquery-1.7.1.min.js"></script>
     <script src="Script/jquery-ui-1.8.20.min.js"></script>
     <script src="Script/JSFunction.js"></script>
+
+    <!-- -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- -->
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css" />
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="plugins/iCheck/all.css" />
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css" />
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css" />
 
     <link rel="stylesheet" href="CSS/Master.css" />
 
@@ -54,6 +74,25 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="Index.aspx">Claim Project</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="Claim.aspx">Claim</a></li>
+            <li><a href="ClaimImport.aspx">Claim Import</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
         <div class="ps-ms-center-content">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

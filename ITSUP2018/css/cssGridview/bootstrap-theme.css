@@ -345,7 +345,7 @@ a {
 
     a:hover,
     a:focus {
-        color: #0055b3;
+        color: #555555;
         text-decoration: underline;
     }
 
@@ -2499,7 +2499,7 @@ textarea.input-lg {
 
             .btn-link:hover,
             .btn-link:focus {
-                color: #0055b3;
+                color: #555555;
                 text-decoration: underline;
                 background-color: transparent;
             }
@@ -4209,8 +4209,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav a:hover .caret {
-    border-top-color: #0055b3;
-    border-bottom-color: #0055b3;
+    border-top-color: #555555;
+    border-bottom-color: #555555;
 }
 
 .nav-tabs .dropdown-menu {
