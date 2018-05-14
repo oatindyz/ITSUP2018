@@ -54,6 +54,8 @@ namespace ITSUP2018
                         IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
                         //excelReader.IsFirstRowAsColumnNames = false;
                         int i = 0;
+                
+
                         while (excelReader.Read())
                         {
                             if (i > 0)

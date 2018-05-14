@@ -83,12 +83,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="Index.aspx">Claim Project</a>
+          <a class="navbar-brand" href="Claim.aspx">List Claim</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="Claim.aspx">Claim</a></li>
-            <li><a href="ClaimImport.aspx">Claim Import</a></li>
+            <li><a href="ClaimAdd.aspx">Add Claim</a></li>
+            <li><a href="ClaimImport.aspx">Add Claim(Import)</a></li>
+            <li><a href="ClaimListAll.aspx">List All Claim</a></li>
           </ul>
         </div>
       </div>

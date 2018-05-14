@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Claim" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Claim.aspx.cs" Inherits="ITSUP2018.Claim" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ClaimListAll.aspx.cs" Inherits="ITSUP2018.ClaimListAll" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="css/cssGridview/jquery-1.11.1.min.js"></script>
     <script src="css/cssGridview/jquery.dataTables.min.js"></script>
@@ -57,23 +56,24 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <div class="ps-header">
-            <img src="Image/Icon/Manage.png" />List Repair Equipment
-        <span style="text-align: right; float: right;"><a href="ClaimImport.aspx">
-            <img src="Image/Icon/Manage.png" />Import Claim</a></span>
+            <img src="Image/Icon/Manage.png" />List All Repair Equipment
+        <span style="text-align: right; float: right;"></span>
         </div>
+
         <div style="margin-top: 30px">
             <table class="table table-striped table-bordered " style="font-family: Serif;" id="example1">
                 <thead>
                     <tr>
-                        <th class="center">เลขที่เอกสาร</th>
-                        <th class="center">ชื่อรุ่นคอมพิวเตอร์</th>
-                        <th class="center">อาการอุปกรณ์ที่เสีย</th>
-                        <th class="center">เลขเคสงาน</th>
-                        <th class="center">วันที่โทรแจ้งเคลม</th>
+                        <th class="center">Equip_Rep</th>
+                        <th class="center">Equip_Name</th>
+                        <th class="center">Equip_Asset</th>
+                        <th class="center">Equip_Remark</th>
+                        <th class="center">Equip_Case_Claim</th>
+                        <th class="center">Status</th>
                         <th class="center">Actions</th>
                     </tr>
                 </thead>
-                <tbody id="tlistNo" runat="server">
+                <tbody id="tlistAll" runat="server">
                 </tbody>
             </table>
         </div>

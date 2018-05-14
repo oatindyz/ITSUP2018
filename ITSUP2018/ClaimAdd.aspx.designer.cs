@@ -10,25 +10,7 @@
 namespace ITSUP2018 {
     
     
-    public partial class ClaimDetail {
-        
-        /// <summary>
-        /// MV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MV;
-        
-        /// <summary>
-        /// View0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View View0;
+    public partial class ClaimAdd {
         
         /// <summary>
         /// trEquip_Rep control.
@@ -110,15 +92,6 @@ namespace ITSUP2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow trID_Equip_Type;
-        
-        /// <summary>
-        /// HF_ID_Equip_Type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField HF_ID_Equip_Type;
         
         /// <summary>
         /// RB_Type_PC control.
@@ -238,15 +211,6 @@ namespace ITSUP2018 {
         protected global::System.Web.UI.HtmlControls.HtmlTableRow trCase_Brand;
         
         /// <summary>
-        /// HF_Case_Brand control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField HF_Case_Brand;
-        
-        /// <summary>
         /// RB_Case_Brand_Lenovo control.
         /// </summary>
         /// <remarks>
@@ -274,96 +238,6 @@ namespace ITSUP2018 {
         protected global::System.Web.UI.WebControls.RadioButton RB_Case_Brand_Dell;
         
         /// <summary>
-        /// trDate_Claim control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDate_Claim;
-        
-        /// <summary>
-        /// tbDate_Claim control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDate_Claim;
-        
-        /// <summary>
-        /// trCase_Remark control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCase_Remark;
-        
-        /// <summary>
-        /// tbCase_Remark control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbCase_Remark;
-        
-        /// <summary>
-        /// trDate_Sent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDate_Sent;
-        
-        /// <summary>
-        /// tbDate_Sent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDate_Sent;
-        
-        /// <summary>
-        /// trEquip_Status control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEquip_Status;
-        
-        /// <summary>
-        /// HFvalueCheck control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField HFvalueCheck;
-        
-        /// <summary>
-        /// cbtbEquip_StatusY control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton cbtbEquip_StatusY;
-        
-        /// <summary>
-        /// cbtbEquip_StatusN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton cbtbEquip_StatusN;
-        
-        /// <summary>
         /// lbuBack control.
         /// </summary>
         /// <remarks>
@@ -380,23 +254,5 @@ namespace ITSUP2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbuSave;
-        
-        /// <summary>
-        /// View1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
-        
-        /// <summary>
-        /// lbBackListClaim control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbBackListClaim;
     }
 }

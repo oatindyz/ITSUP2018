@@ -161,15 +161,82 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Claim.aspx" />
+    <Content Include="ClaimAdd.aspx" />
     <Content Include="ClaimDelete.aspx" />
     <Content Include="ClaimDetail.aspx" />
+    <Content Include="ClaimDetailDelete.aspx" />
     <Content Include="ClaimImport.aspx" />
+    <Content Include="ClaimListAll.aspx" />
     <Content Include="css\cssGridview\bootstrap-theme.css" />
     <Content Include="css\cssGridview\bootstrap.min.css" />
     <Content Include="css\cssGridview\dataTables.jqueryui.css" />
     <Content Include="css\cssGridview\jquery-1.11.1.min.js" />
     <Content Include="css\cssGridview\jquery.dataTables.min.js" />
     <Content Include="Image\Icon\manage.png" />
+    <Content Include="Image\Small\a.png" />
+    <Content Include="Image\Small\add.png" />
+    <Content Include="Image\Small\arrow_right.png" />
+    <Content Include="Image\Small\back.png" />
+    <Content Include="Image\Small\backward.png" />
+    <Content Include="Image\Small\bell.png" />
+    <Content Include="Image\Small\bin.png" />
+    <Content Include="Image\Small\calendar.gif" />
+    <Content Include="Image\Small\calendar.png" />
+    <Content Include="Image\Small\cancel.png" />
+    <Content Include="Image\Small\clip.png" />
+    <Content Include="Image\Small\clock-history.png" />
+    <Content Include="Image\Small\clock.png" />
+    <Content Include="Image\Small\comment.png" />
+    <Content Include="Image\Small\copy.png" />
+    <Content Include="Image\Small\correct.png" />
+    <Content Include="Image\Small\delete.png" />
+    <Content Include="Image\Small\document-accept.png" />
+    <Content Include="Image\Small\document-create.png" />
+    <Content Include="Image\Small\document-delete.png" />
+    <Content Include="Image\Small\document-edit.png" />
+    <Content Include="Image\Small\document.png" />
+    <Content Include="Image\Small\edit.png" />
+    <Content Include="Image\Small\excel.png" />
+    <Content Include="Image\Small\forward.png" />
+    <Content Include="Image\Small\home.png" />
+    <Content Include="Image\Small\home3.png" />
+    <Content Include="Image\Small\ID.png" />
+    <Content Include="Image\Small\image.png" />
+    <Content Include="Image\Small\info.png" />
+    <Content Include="Image\Small\key.png" />
+    <Content Include="Image\Small\list.png" />
+    <Content Include="Image\Small\location.png" />
+    <Content Include="Image\Small\lock.png" />
+    <Content Include="Image\Small\logout.png" />
+    <Content Include="Image\Small\medal.png" />
+    <Content Include="Image\Small\menu-blue.png" />
+    <Content Include="Image\Small\money.png" />
+    <Content Include="Image\Small\next.png" />
+    <Content Include="Image\Small\office.png" />
+    <Content Include="Image\Small\paper.png" />
+    <Content Include="Image\Small\pencil_y.png" />
+    <Content Include="Image\Small\person.png" />
+    <Content Include="Image\Small\person2.png" />
+    <Content Include="Image\Small\phone.png" />
+    <Content Include="Image\Small\pointer.png" />
+    <Content Include="Image\Small\position.png" />
+    <Content Include="Image\Small\printer.png" />
+    <Content Include="Image\Small\progress.png" />
+    <Content Include="Image\Small\question.png" />
+    <Content Include="Image\Small\red_alert.png" />
+    <Content Include="Image\Small\refresh.png" />
+    <Content Include="Image\Small\report.png" />
+    <Content Include="Image\Small\save.png" />
+    <Content Include="Image\Small\search.png" />
+    <Content Include="Image\Small\send-email.png" />
+    <Content Include="Image\Small\statistic.png" />
+    <Content Include="Image\Small\table.png" />
+    <Content Include="Image\Small\unlock.png" />
+    <Content Include="Image\Small\upload.png" />
+    <Content Include="Image\Small\web.png" />
+    <Content Include="Image\Small\word.png" />
+    <Content Include="Image\Small\wrench.png" />
+    <Content Include="Image\Small\yellow_alert.png" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -182,6 +249,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Upload\ImportFormatColumn.xlsx" />
+    <Content Include="Image\Small\Thumbs.db" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -2633,6 +2701,13 @@
     <Compile Include="Claim.aspx.designer.cs">
       <DependentUpon>Claim.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClaimAdd.aspx.cs">
+      <DependentUpon>ClaimAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimAdd.aspx.designer.cs">
+      <DependentUpon>ClaimAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClaimDelete.aspx.cs">
       <DependentUpon>ClaimDelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2647,12 +2722,26 @@
     <Compile Include="ClaimDetail.aspx.designer.cs">
       <DependentUpon>ClaimDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClaimDetailDelete.aspx.cs">
+      <DependentUpon>ClaimDetailDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimDetailDelete.aspx.designer.cs">
+      <DependentUpon>ClaimDetailDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClaimImport.aspx.cs">
       <DependentUpon>ClaimImport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ClaimImport.aspx.designer.cs">
       <DependentUpon>ClaimImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimListAll.aspx.cs">
+      <DependentUpon>ClaimListAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimListAll.aspx.designer.cs">
+      <DependentUpon>ClaimListAll.aspx</DependentUpon>
     </Compile>
     <Compile Include="Class\ConnectionDB.cs" />
     <Compile Include="Class\DatabaseManager.cs" />
